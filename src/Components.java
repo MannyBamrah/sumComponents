@@ -9,11 +9,12 @@ public class Components {
 		BigInteger comp1 = num.divide(new BigInteger("2"));
 		BigInteger comp2 = num.subtract(comp1);
 		if(comp1.toString().contains("4")) {
-		BigInteger balance = findPositionOf4(comp1);
-		comp1 = comp1.subtract(balance);
-		comp2 = comp2.add(balance);}
-		else if (comp2.toString().contains("4")) {
 			BigInteger balance = findPositionOf4(comp1);
+			comp1 = comp1.subtract(balance);
+			comp2 = comp2.add(balance);
+			}
+		else if (comp2.toString().contains("4")) {
+			BigInteger balance = findPositionOf4(comp2);
 			comp1 = comp1.add(balance);
 			comp2 = comp2.subtract(balance);
 		}
